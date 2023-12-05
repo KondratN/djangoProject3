@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USERS</title>
+</head>
+<body>
+    <h1>{{ head }}</h1>
+
+<table border="1">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Address</th>
+    </tr>
+</thead>
+<tbody>
+    {% for us in user %}
+        <tr>
+            <td><a href="{{ us.id }}">{{ us.id }}</a></td>
+            <td>{{ us.name }}</td>
+            <td>{{ us.lastname }}</td>
+            <td>{{ us.age }}</td>
+            <td>{{ us.phone }}</td>
+            <td>{{ us.address }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</body>
+</html>

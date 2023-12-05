@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USERS</title>
+</head>
+<body>
+    <h1>{{ head }}</h1>
+
+<table border="1">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Task</th>
+        <th>DeadLine</th>
+    </tr>
+</thead>
+<tbody>
+    {% for ts in task %}
+        <tr>
+            <td><a href="{{ ts.id }}">{{ ts.id }}</a></td>
+            <td>{{ ts.name }}</td>
+            <td>{{ ts.deadline }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</body>
+</html>
